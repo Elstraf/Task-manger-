@@ -4,6 +4,8 @@
 
 I did go over the 2 hour limit I stopped after 2 hours and 30 mins. - Reading redux docs.
 
+Used headlessUi for the Modal Component
+
 ## Setup
 
 You will need pnpm installed onto your local machine. Please see the installation page to get up and running with this https://pnpm.io/installation.
