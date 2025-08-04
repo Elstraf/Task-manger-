@@ -1,69 +1,37 @@
-# React + TypeScript + Vite
+# Task Manager App - Atarim
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Disclamier
 
-Currently, two official plugins are available:
+I did go over the 2 hour limit I stopped after 2 hours and 30 mins. - Reading redux docs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup
 
-## Expanding the ESLint configuration
+You will need pnpm installed onto your local machine. Please see the installation page to get up and running with this https://pnpm.io/installation.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To get up and running clone the repo down
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone git@github.com:Elstraf/Task-manger-.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then cd into the new directory and run
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm i
 ```
+
+## Features Implemented
+
+- Creating new Todos
+- Updating new Todos
+- Marking Todos as completed
+- Delete Todos
+- Statistics (Showing how many are left / how many are completed)
+
+## If I Had More Time
+
+- Local storage to allow todos to be persistence
+- Filter and task title searching - Eg allow the user to search for a given task / fitler based of prio and due date.
+- Better user feedback on deleted / creation / editing a todo EG a toast
+- Unit testing
+- Form validation
